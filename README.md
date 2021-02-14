@@ -34,7 +34,7 @@ In the boilerplate, it looks like we're intended to retrieve **route parameters*
 Route parameters are included in the URL, and can be retrieved programmatically using the HTML _request_ object.
 
 _Example_:  
-_https://timestamp-microservice.freecodecamp.rocks/api/timestamp/**2021-12-25**_
+_https://timestamp-microservice.freecodecamp.rocks/api/timestamp/2021-12-25_
 
 ---
 
