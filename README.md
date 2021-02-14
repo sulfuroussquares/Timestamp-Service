@@ -56,3 +56,9 @@ so for my implementation I just converted this into an integer and then converte
 
 To determine if the parameter was already in date or UNIX time, I implemented simple validation to verify if Date()
 functions worked on the raw input. If not, I assumed this is is a UNIX time and converted to an Integer, then to a Date.
+
+---
+#### Credit
+
+The idea for this project (and base fork boilerplate with no functionality) comes from [FreeCodeCamp](https://www.freecodecamp.org/).
+I used [Glitch](https://glitch.com/) as a quick way to build/test a Node-based webapp without having to set up a local repository on my machine.
