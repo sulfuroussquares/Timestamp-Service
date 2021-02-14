@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 
 <html>
-   <head>
-      <title>Timestamp Microservice | freeCodeCamp.org</title>
-      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="style.css" rel="stylesheet" type="text/css">
-   </head>
+  <head>
+    <title>Timestamp Microservice | Brian Betancourt</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-   <body>
+  <body>
     <h1>Timestamp Microservice</h1>
     <hr />
     <div class="container">
       <h3>Example Usage:</h3>
       <ul>
-        <li><a href="api/timestamp/2015-12-25">[project url]/api/timestamp/2015-12-25</a></li>
-        <li><a href="api/timestamp/1451001600000">[project url]/api/timestamp/1451001600000</a></li>
+        <li>
+          <a href="api/timestamp/2015-12-25"
+            >[project url]/api/timestamp/2015-12-25</a
+          >
+        </li>
+        <li>
+          <a href="api/timestamp/1451001600000"
+            >[project url]/api/timestamp/1451001600000</a
+          >
+        </li>
       </ul>
+      <p>
+        You can pass in a time in either format and receive back a JSON-formatted response with your time in UNIX time or UTC String.
+      </p>
 
       <h3>Example Output:</h3>
       <p>
-        <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
+        <code
+          >{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code
+        >
       </p>
     </div>
+
     <div class="footer">
       <p>
-        By <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a>
+        Original concept forked from boilerplate at
+        <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a>
       </p>
     </div>
   </body>
