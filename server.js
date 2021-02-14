@@ -18,6 +18,18 @@ app.get("/", function(req, res) {
   res.sendFile(__dirname + "/views/index.html");
 });
 
+// An empty date parameter should return the current time in a JSON object with a unix key
+
+app.get("/api/timestamp/", function(req, res) {
+  let convertedUtcTime, unixTime;
+  convertedUtcTime = new Date().toUTCString();
+  let rawTime = new Date();
+  res.json({
+    unix: Math.floor(new Date(convertedUtcTime) / 1),
+    utc: convertedUtcTime
+  });
+});
+
 // Route parameters are named segments of the URL, delimited by slashes (/).
 // Each segment captures the value of the part of the URL which matches its position.
 // The captured values can be found in the req.params object.
@@ -30,18 +42,27 @@ app.get("/api/timestamp/:timestamp", function(req, res) {
 
   if (valid) {
     convertedUtcTime = new Date(req.params.timestamp).toUTCString();
-    unixTime = Math.floor(new Date(rawTime) / 1000);
-    res.json({
-      unix: unixTime,
-      utc: convertedUtcTime,
-    });
-  } else {
-    unixTime = parseInt(req.params.timestamp, 10);
-    convertedUtcTime = new Date(unixTime).toUTCString();
+    unixTime = Math.floor(new Date(rawTime) / 1);
     res.json({
       unix: unixTime,
       utc: convertedUtcTime
     });
+  } else {
+    unixTime = parseInt(req.params.timestamp, 10);
+    // verify we are handling a valid unix date
+    if (unixTime > 0) {
+      convertedUtcTime = new Date(unixTime).toUTCString();
+      res.json({
+        unix: unixTime,
+        utc: convertedUtcTime,
+        rawtime: rawTime
+      });
+    }
+    else {
+      res.json({
+        error: "Invalid Date"
+      })
+    }
   }
 });
 
