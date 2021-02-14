@@ -60,5 +60,5 @@ functions worked on the raw input. If not, I assumed this is is a UNIX time and 
 ---
 #### Credit
 
-The idea for this project (and base fork boilerplate with no functionality) comes from [FreeCodeCamp](https://www.freecodecamp.org/).
+The idea for this project (and base fork boilerplate with no functionality) comes from [FreeCodeCamp](https://www.freecodecamp.org/).  
 I used [Glitch](https://glitch.com/) as a quick way to build/test a Node-based webapp without having to set up a local repository on my machine.
